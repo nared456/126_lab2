@@ -1,12 +1,12 @@
 #include<stdio.h>
 int main()
 {
-    int a,b,c,grade = 0;
+    int a,b,c,grade;
     scanf("%d",&a);
     scanf("%d",&b);
     scanf("%d",&c);
     grade = a+b+c;
-    if(a<=30 && b<=30 && c<=40)
+    if(a>=0 && a<=30 && b>=0 && b<=30 && c>=0 && c<=40)
     {
         if(grade>=80 || grade<=100)
         {
@@ -41,6 +41,5 @@ int main()
             printf("F");
         }
     }
-
     return 0;
 }
