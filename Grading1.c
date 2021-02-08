@@ -6,33 +6,34 @@ int main()
     scanf("%d",&b);
     scanf("%d",&c);
     grade = a+b+c;
+    //printf("%d",grade);
     if(a>=0 && a<=30 && b>=0 && b<=30 && c>=0 && c<=40)
     {
-        if(grade>=80 || grade<=100)
+        if(grade >80 )
         {
             printf("A");
         }
-        else if(grade>=75 || grade<=79)
+        else if(grade>=75)
         {
             printf("B+");
         }
-        else if(grade>=70 || grade<=74)
+        else if(grade>=70)
         {
             printf("B");
         }
-        else if(grade>=65 || grade<=69)
+        else if(grade>=65 )
         {
             printf("C+");
         }
-        else if(grade>=60 || grade<=64)
+        else if(grade>=60 )
         {
             printf("C+");
         }
-        else if(grade>=55 || grade<=59)
+        else if(grade>=55 )
         {
             printf("D+");
         }
-        else if(grade>=50 || grade<=54)
+        else if(grade>=50 )
         {
             printf("D");
         }
