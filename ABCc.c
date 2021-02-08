@@ -4,8 +4,7 @@ int main()
     int a[3],i,j,tmp;
     char b[4];
     scanf("%d %d %d",&a[0],&a[1],&a[2]);
-   // fflush(stdin);
-    gets(b);
+    scanf("%s",b);
     for(i=0;i<3;i++)
     {
         for(j=0;j<3-i;j++)
