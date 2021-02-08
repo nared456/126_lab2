@@ -1,84 +1,53 @@
 #include<stdio.h>
-#include<string.h>
 int main()
 {
-    int i;
-    char ch[100];
-    scanf("%s",ch);
-    for(i=0; i<strlen(ch); i++)
+    long long a,b;
+    scanf("%lld",&a);
+    b = a;
+    if(a == 0)
+        printf("Zero");
+    else
     {
-        switch(ch[i])
+        int i,n;
+        for(n=0;b>0;n++)
         {
-        case '0':
-            printf("Zero");
-            if(ch[i+1] != NULL)
+            b/=10;
+        }
+        int x[n];
+        for(i=0;i<n;i++)
+        {
+            x[i] = a%10;
+            a/=10;
+        }
+        for(i=n;i>0;i--)
+        {
+            switch(x[i-1])
             {
-                printf("-");
+            case 0 : printf("Zero");
+                     break;
+            case 1 : printf("One");
+                     break;
+            case 2 : printf("Two");
+                     break;
+            case 3 : printf("Three");
+                     break;
+            case 4 : printf("Four");
+                     break;
+            case 5 : printf("Five");
+                     break;
+            case 6 : printf("Six");
+                     break;
+            case 7 : printf("Seven");
+                     break;
+            case 8 : printf("Eight");
+                     break;
+            case 9 : printf("Nine");
+                     break;
             }
-            break;
-        case '1':
-            printf("One");
-            if(ch[i+1] != NULL)
-            {
+            if(i!=1)
                 printf("-");
-            }
-            break;
-        case '2':
-            printf("Two");
-            if(ch[i+1] != NULL)
-            {
-                printf("-");
-            }
-            break;
-        case '3':
-            printf("Three");
-            if(ch[i+1] != NULL)
-            {
-                printf("-");
-            }
-            break;
-        case '4':
-            printf("Four");
-            if(ch[i+1] != NULL)
-            {
-                printf("-");
-            }
-            break;
-        case '5':
-            printf("Five");
-            if(ch[i+1] != NULL)
-            {
-                printf("-");
-            }
-            break;
-        case '6':
-            printf("Six");
-            if(ch[i+1] != NULL)
-            {
-                printf("-");
-            }
-            break;
-        case '7':
-            printf("Seven");
-            if(ch[i+1] != NULL)
-            {
-                printf("-");
-            }
-            break;
-        case '8':
-            printf("Eight");
-            if(ch[i+1] != NULL)
-            {
-                printf("-");
-            }
-            break;
-        case '9':
-            printf("Nine");
-            if(ch[i+1] != NULL)
-            {
-                printf("-");
-            }
-            break;
         }
     }
+
+    return 0;
 }
