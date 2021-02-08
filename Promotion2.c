@@ -5,7 +5,7 @@ int main()
     float time;
     scanf("%c",&pro);
     scanf("%f",&time);
-    float sum=0;
+    double sum=0;
     if(pro == 'A')
     {
         sum = round((time - 200)*3 + 199);
