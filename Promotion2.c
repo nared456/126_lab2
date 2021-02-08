@@ -13,8 +13,8 @@ int main()
     }
     else if(pro == 'B')
     {
-        sum = round((time - 400)*2 + 299);
-        printf("%.2f",sum);
+        sum = round((time-400)*2 + 299);
+        printf("%.3f",sum);
     }
     return 0;
 }
