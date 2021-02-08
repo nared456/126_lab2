@@ -2,9 +2,10 @@
 int main()
 {
     int age;
+    int i=92;
     char name;
-    char odd_emoji[][50]= {"(^_^)","(*0*)","(T_T)"};
-    char even_emoji[][50]= {"{@_@}","{*v*}","{x_x}"};
+    char odd_emoji[50][50]= {"(^_^)","(*o*)","(T_T)"};
+    char even_emoji[50][50]= {"{@_@}","{*v*}","{X_X}"};
     scanf("%c",&name);
     scanf("%d",&age);
     if(age%2==0)
@@ -24,18 +25,37 @@ int main()
     }
     else
     {
-        if(name>=65 && name<=73)
+        if(age%5==0)
         {
-            printf("%s",odd_emoji[0]);
+            if(name>=65 && name<=73)
+            {
+                printf("%c%s/",(unsigned int)i,odd_emoji[0]);
+            }
+            else if(name>=74 && name<=82)
+            {
+                printf("%c\%s/",(unsigned int)i,odd_emoji[1]);
+            }
+            else if(name>=83 && name<=90)
+            {
+                printf("%c%s/",(unsigned int)i,odd_emoji[2]);
+            }
         }
-        else if(name>=74 && name<=82)
+        else
         {
-            printf("%s",odd_emoji[1]);
+            if(name>=65 && name<=73)
+            {
+                printf("%s",odd_emoji[0]);
+            }
+            else if(name>=74 && name<=82)
+            {
+                printf("%s",odd_emoji[1]);
+            }
+            else if(name>=83 && name<=90)
+            {
+                printf("%s",odd_emoji[2]);
+            }
         }
-        else if(name>=83 && name<=90)
-        {
-            printf("%s",odd_emoji[2]);
-        }
+
     }
     return 0;
 }
